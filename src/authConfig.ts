@@ -2,9 +2,9 @@ import { PublicClientApplication, Configuration } from '@azure/msal-browser';
 
 export const msalConfig: Configuration = {
   auth: {
-    clientId: 'ĐIỀN_CLIENT_ID_CỦA_BẠN_VÀO_ĐÂY', // VD: '11111111-1111-1111-1111-111111111111'
-    authority: 'https://login.microsoftonline.com/ĐIỀN_TENANT_ID_CỦA_BẠN_VÀO_ĐÂY',
-    redirectUri: 'http://localhost:3000', // Khớp 100% với Azure Portal
+    clientId: import.meta.env.VITE_AZURE_CLIENT_ID || '',
+    authority: `https://login.microsoftonline.com/${import.meta.env.VITE_AZURE_TENANT_ID || ''}`,
+    redirectUri: import.meta.env.VITE_AZURE_REDIRECT_URI || 'http://localhost:3000',
   },
   cache: {
     cacheLocation: 'sessionStorage', // Có thể dùng 'localStorage'
