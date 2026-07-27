@@ -1,4 +1,4 @@
-import React, { useEffect, useState, ReactNode } from 'react';
+import { useEffect, useState, ReactNode } from 'react';
 import { useMsal, MsalProvider } from '@azure/msal-react';
 import { EventMessage, EventType, AuthenticationResult } from '@azure/msal-browser';
 import { msalInstance } from './authConfig';

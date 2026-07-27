@@ -1,4 +1,3 @@
-import React from 'react';
 import { useSsoLogin } from './AuthContext';
 import { useIsAuthenticated, useMsal } from '@azure/msal-react';
 
