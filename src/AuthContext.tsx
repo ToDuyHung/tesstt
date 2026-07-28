@@ -4,7 +4,12 @@ import { EventMessage, EventType, AuthenticationResult } from '@azure/msal-brows
 import { msalInstance } from './authConfig';
 
 export const loginRequest = {
-  scopes: ['User.Read'],
+  scopes: [
+    'User.Read',
+    'https://analysis.windows.net/powerbi/api/Report.Read.All',
+    'https://analysis.windows.net/powerbi/api/Workspace.Read.All',
+    'https://analysis.windows.net/powerbi/api/Dataset.Read.All'
+  ],
 };
 
 export const useSsoLogin = () => {
